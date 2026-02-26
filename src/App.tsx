@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import { siteConfig } from "./config/site"
-import { ArrowUpRight } from "lucide-react"
 
 // Animation variants
 const fadeUp = {
@@ -304,43 +303,6 @@ function App() {
                   <span className="text-muted-foreground">{step.text}</span>
                 )}
               </motion.div>
-            ))}
-          </motion.div>
-        </Section>
-
-        <Divider />
-
-        {/* ═══════ LINKS ═══════ */}
-        <Section>
-          <SectionLabel>Resources</SectionLabel>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={stagger}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border mt-8"
-          >
-            {siteConfig.links.map((link, i) => (
-              <motion.a
-                key={i}
-                variants={fadeUp}
-                custom={i}
-                href={link.href}
-                target={link.href.startsWith('http') ? '_blank' : undefined}
-                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="bg-background p-6 group hover:bg-card/80 transition-all duration-300 flex items-start justify-between"
-              >
-                <div>
-                  <span className="font-display font-bold text-foreground group-hover:text-primary transition-colors">
-                    {link.title}
-                  </span>
-                  <span className="block text-sm text-muted-foreground mt-1">
-                    {link.description}
-                  </span>
-                </div>
-                <ArrowUpRight className="w-4 h-4 text-muted-foreground/30 group-hover:text-primary transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 mt-1 shrink-0" />
-              </motion.a>
             ))}
           </motion.div>
         </Section>
