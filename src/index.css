@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: 'Instrument Sans', sans-serif;
+    --font-sans: 'Instrument Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+
+    --background: 0 0% 3.5%;
+    --foreground: 40 10% 92%;
+    --card: 0 0% 6%;
+    --card-foreground: 40 10% 92%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 40 10% 92%;
+    --primary: 25 100% 52%;
+    --primary-foreground: 0 0% 2%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 10% 92%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 48%;
+    --accent: 25 100% 52%;
+    --accent-foreground: 0 0% 2%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 25 100% 52%;
+    --radius: 0px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    margin: 0;
+  }
+
+  ::selection {
+    background: hsl(25 100% 52% / 0.3);
+    color: white;
+  }
+}
