@@ -1,0 +1,16 @@
+{
+  "name": "moloch-dao-prototype",
+  "version": "1.0.0",
+  "description": "MolochDAO (Baal v3) prototype on Ethereum Sepolia",
+  "scripts": {
+    "summon": "node 1-summon-dao.js",
+    "propose": "node 2-submit-proposal.js",
+    "vote": "node 3-vote.js",
+    "process": "node 4-process-proposal.js",
+    "ragequit": "node 5-ragequit.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.4"
+  }
+}
