@@ -1,0 +1,5 @@
+[
+  "function giveFeedback(uint256 agentId, int128 value, uint8 valueDecimals, string tag1, string tag2, string endpoint, string feedbackURI, bytes32 feedbackHash)",
+  "function getSummary(uint256 agentId, address[] clientAddresses, string tag1, string tag2) view returns (uint64 count, int128 value, uint8 decimals)",
+  "event NewFeedback(uint256 indexed agentId, address indexed client, int128 value, uint8 valueDecimals, string tag1, string tag2)"
+]
